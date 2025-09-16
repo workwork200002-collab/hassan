@@ -1,15 +1,17 @@
+/* General */
 body {
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  color: #333;
+  background: #f8f9fa;
+  color: #222;
 }
 
+/* Header */
 header {
-  background: #222;
+  background: #222831;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,35 +23,89 @@ header img {
 
 nav a {
   color: #fff;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: #00ADB5;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('images/hero.jpg') no-repeat center center/cover;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Sections */
 .section {
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
+.section h2 {
+  text-align: center;
+  color: #222831;
+  margin-bottom: 30px;
+}
+
+/* Products Grid */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .product-box {
   background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
+.product-box:hover {
+  transform: translateY(-5px);
+}
+
+.product-box img {
+  max-height: 160px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
 footer {
-  background: #222;
+  background: #222831;
   color: #fff;
   text-align: center;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+/* Buttons */
+button, .btn {
+  background: #00ADB5;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button:hover, .btn:hover {
+  background: #007f83;
 }
